@@ -5,7 +5,7 @@ Quick guide to making POST request in Power Query M language
 let
     
     # load the file
-    Source = Csv.Document(File.Contents("test.txt"),[Delimiter=",", Columns=80, QuoteStyle=QuoteStyle.None]),
+    Source = Csv.Document(File.Contents("test.txt"),[Delimiter=",", Columns=number, QuoteStyle=QuoteStyle.None]),
     
     # promote headers
     table = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
